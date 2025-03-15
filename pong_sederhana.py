@@ -1,4 +1,4 @@
-import pygame
+import pygame # install "pip install pygame" in cmd
 
 # inisialisasi pygame
 pygame.init()
@@ -16,8 +16,8 @@ pygame.display.set_caption("pong sederhana")
 bola = pygame.Rect(LEBAR // 2 - 15, TINGGI // 2 - 15, 30, 30)
 pemukul_kiri = pygame.Rect(20, TINGGI // 2 - 60, 10, 120)
 pemukul_kanan = pygame.Rect(LEBAR - 30, TINGGI // 2 - 60, 10, 120)
-kecepatan_bola = [4, 4]
-kecepatan_pemukul = 6
+kecepatan_bola = [10, 10]
+kecepatan_pemukul = 8
 
 # Loop utama permainan
 running = True
@@ -53,7 +53,7 @@ while running:
     # Reset bola jika keluar dari layar
     if bola.left <=0 or bola.right >= LEBAR:
         bola.x, bola.y = LEBAR // 2 - 15, TINGGI // 2 - 15
-        kecepatan_bola = [4, 4]
+        kecepatan_bola = [10, 10]
 
     # mengambar objek di layar
     layar.fill(WARNA_LATAR)
