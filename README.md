@@ -1,1 +1,1 @@
-Game for python
+Game with python programming
